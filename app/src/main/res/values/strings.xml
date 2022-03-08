@@ -3,4 +3,9 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="translations">Michał Musiałowicz</string>
+    <string name="button">Dodaj ćpuna</string>
+    <string name="child">Child\nrewards</string>
+    <string name="textCard1">Zygmunt</string>
+    <string name="textCard2">Maurycy</string>
 </resources>
