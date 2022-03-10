@@ -3,10 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/mmusialowicz/AndroidStudioProjects/LSMjava/app/src/main/res/drawable-v24/edit.xml" value="0.2595" />
+        <entry key="..\:/Users/mmusialowicz/AndroidStudioProjects/LSMjava/app/src/main/res/drawable-v24/fajny_boar.xml" value="0.2595" />
+        <entry key="..\:/Users/mmusialowicz/AndroidStudioProjects/LSMjava/app/src/main/res/drawable-v24/inny_boar.xml" value="0.2595" />
+        <entry key="..\:/Users/mmusialowicz/AndroidStudioProjects/LSMjava/app/src/main/res/drawable-v24/twemoji_boar.xml" value="0.2595" />
         <entry key="..\:/Users/mmusialowicz/AndroidStudioProjects/LSMjava/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.2595" />
-        <entry key="..\:/Users/mmusialowicz/AndroidStudioProjects/LSMjava/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/mmusialowicz/AndroidStudioProjects/LSMjava/app/src/main/res/layout/activity_main.xml" value="0.4" />
         <entry key="..\:/Users/mmusialowicz/AndroidStudioProjects/LSMjava/app/src/main/res/layout/fragment_dashboard.xml" value="0.19927536231884058" />
-        <entry key="..\:/Users/mmusialowicz/AndroidStudioProjects/LSMjava/app/src/main/res/layout/fragment_home.xml" value="0.264" />
+        <entry key="..\:/Users/mmusialowicz/AndroidStudioProjects/LSMjava/app/src/main/res/layout/fragment_home.xml" value="0.4478178368121442" />
         <entry key="..\:/Users/mmusialowicz/AndroidStudioProjects/LSMjava/app/src/main/res/layout/fragment_notifications.xml" value="0.19927536231884058" />
       </map>
     </option>
