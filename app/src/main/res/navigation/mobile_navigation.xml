@@ -9,12 +9,16 @@
         android:id="@+id/navigation_home"
         android:name="pl.musialowicz.java.lsm.ui.home.HomeFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_addDzikFragment"
+            app:destination="@id/addDzikFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_dashboard"
         android:name="pl.musialowicz.java.lsm.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
+        android:label="@string/assignDutiesFragmentTitle"
         tools:layout="@layout/fragment_dashboard" />
 
     <fragment
@@ -22,4 +26,15 @@
         android:name="pl.musialowicz.java.lsm.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
+
+    <fragment
+        android:id="@+id/addDzikFragment"
+        android:name="pl.musialowicz.java.lsm.ui.add.dzik.AddDzikFragment"
+        android:label="AddDzikFragment"
+        tools:layout="@layout/fragment_add_dzik">
+        <action
+            android:id="@+id/action_addDzikFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+
 </navigation>

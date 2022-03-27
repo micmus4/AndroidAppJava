@@ -2,21 +2,188 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/duties_fragment_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/backgroud_dashboard"
     tools:context=".ui.dashboard.DashboardFragment">
 
-    <TextView
-        android:id="@+id/text_dashboard"
-        android:layout_width="match_parent"
+    <ImageView
+        android:id="@+id/calendarImg"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
+        android:src="@android:drawable/ic_menu_my_calendar"
+        app:layout_constraintBottom_toTopOf="@+id/dateInput"
+        app:layout_constraintEnd_toStartOf="@+id/dateLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputName" />
+
+    <ImageView
+        android:id="@+id/editImg"
+        android:layout_width="@dimen/editImgWidth"
+        android:layout_height="@dimen/editImgHeight"
+        android:layout_marginTop="@dimen/editImgMarginTop"
+        android:src="@drawable/edit"
+        app:layout_constraintBottom_toTopOf="@+id/inputName"
+        app:layout_constraintEnd_toStartOf="@+id/taskLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dutyLabel" />
+
+    <Button
+        android:id="@+id/addDutyButtom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/marginTopButtonAddDuty"
+        android:layout_marginEnd="@dimen/addDutyButtonEndMargin"
+        android:text="@string/addDutyOrTaskButtonText"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/dzikThreeImg" />
+
+    <EditText
+        android:id="@+id/dateInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dateInputMarginStart"
+        android:ems="10"
+        android:inputType="date"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/dateLabel" />
+
+    <ImageView
+        android:id="@+id/dzikThreeImg"
+        android:layout_width="@dimen/dzikThreeWidth"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dzikThreeMarginStart"
+        android:layout_marginTop="@dimen/dzikThreeMarginTop"
+        android:layout_marginEnd="@dimen/dzikThreeMarginEnd"
+        android:src="@drawable/ulany_boar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/dzikTwoImg"
+        app:layout_constraintTop_toBottomOf="@+id/assignLabel" />
+
+    <ImageView
+        android:id="@+id/dzikTwoImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dzikTwoImgMarginStart"
+        android:layout_marginTop="@dimen/dzikTwoImgMarginTop"
+        android:src="@drawable/inny_boar"
+        app:layout_constraintStart_toEndOf="@+id/dzikOneImg"
+        app:layout_constraintTop_toBottomOf="@+id/assignLabel" />
+
+    <ImageView
+        android:id="@+id/dzikOneImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dzikOneImgMarginStart"
+        android:layout_marginTop="@dimen/dzikOneMarginTop"
+        android:src="@drawable/fajny_boar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/assignLabel" />
+
+    <TextView
+        android:id="@+id/assignLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/assignLabelMarginStart"
+        android:layout_marginTop="@dimen/assignLabelMarginTop"
+        android:text="@string/assignLabelText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dateInput" />
+
+    <TextView
+        android:id="@+id/dateLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dateLabelMarginStary"
+        android:layout_marginTop="@dimen/dateLabelMarginTop"
+        android:text="@string/dateLabelText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputName" />
+
+    <TextView
+        android:id="@+id/taskLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/taskLabelMarginStart"
+        android:layout_marginTop="@dimen/taskLabelMarginToo"
+        android:layout_marginBottom="@dimen/taskLabelMarginBottom"
+        android:text="@string/taskLabelText"
+        app:layout_constraintBottom_toTopOf="@+id/inputName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dutyLabel" />
+
+    <EditText
+        android:id="@+id/inputName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/inputNameMarginStart"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/taskLabel" />
+
+    <ImageView
+        android:id="@+id/taskImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/taskImgMarginStart"
+        android:layout_marginTop="@dimen/taskImgMarginTop"
+        android:src="@drawable/ic_notifications_black_24dp"
+        app:layout_constraintStart_toEndOf="@+id/taskRadioLabel"
+        app:layout_constraintTop_toBottomOf="@+id/choiceActionRadioGroup" />
+
+    <TextView
+        android:id="@+id/taskRadioLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/taskRadioLabelMarginStart"
+        android:layout_marginTop="@dimen/taskRadioLabelMarginTop"
+        android:text="@string/taskRadioLabelText"
+        app:layout_constraintStart_toEndOf="@+id/dutyImg"
+        app:layout_constraintTop_toBottomOf="@+id/choiceActionRadioGroup" />
+
+    <ImageView
+        android:id="@+id/dutyImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dutyImgMarginStart"
+        android:layout_marginTop="@dimen/dutyImgMarginTop"
+        android:src="@drawable/ic_home_black_24dp"
+        app:layout_constraintStart_toEndOf="@+id/dutyLabel"
+        app:layout_constraintTop_toBottomOf="@+id/choiceActionRadioGroup" />
+
+    <TextView
+        android:id="@+id/dutyLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dutyLabelTopMargin"
+        android:layout_marginEnd="@dimen/dutyLabelMarginEnd"
+        android:text="@string/dutyLabelText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/choiceActionRadioGroup" />
+
+    <RadioGroup
+        android:id="@+id/choiceActionRadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/dutyOption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dutyOptionMarginEnd" />
+
+        <RadioButton
+            android:id="@+id/taskOption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/taskOptionMarginStart" />
+    </RadioGroup>
 </androidx.constraintlayout.widget.ConstraintLayout>

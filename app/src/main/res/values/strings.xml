@@ -1,12 +1,29 @@
 <resources>
     <string name="app_name">LSM-java</string>
     <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_dashboard">Duties</string>
+    <string name="title_notifications">Rewards</string>
     <string name="translations">Michał Musiałowicz</string>
     <string name="button">Dodaj dzika</string>
-    <string name="child">Dzik\nrewards</string>
-    <string name="textCard1">Zygmunt</string>
-    <string name="textCard2">Maurycy</string>
     <string name="rewardsTitle">Dzik\nrewards</string>
+    <string name="purpleDutyTxt">0</string>
+    <string name="greenTitleImg">Dzik</string>
+    <string name="greenHealthTxt">0</string>
+    <string name="greenDutiesTxt">0</string>
+    <string name="orangeTitleTxt">Warchlak</string>
+    <string name="healthPurpleTxt">0</string>
+    <string name="purpleBoarTitleText">Locha</string>
+    <string name="orangeDutiesTxtText">0</string>
+    <string name="orangeHealthTxtText">0</string>
+    <string name="assignDutiesFragmentTitle">Dzik duties</string>
+    <string name="addDutyOrTaskButtonText">Add</string>
+    <string name="assignLabelText">Assigned to dzik:</string>
+    <string name="dateLabelText">Date</string>
+    <string name="taskLabelText">Task</string>
+    <string name="taskRadioLabelText">Tasks</string>
+    <string name="dutyLabelText">Duties</string>
+    <string name="confirmAddingDzikButtonText">Zatwierdź</string>
+    <string name="addDzikTextViewText">Wybierz awatar dzikowi</string>
+    <string name="dzikInputEditText">Dzik\'s name</string>
+    <string name="addDzikFragmentTextViewText">Dodaj dzika</string>
 </resources>

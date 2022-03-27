@@ -1,335 +1,368 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/TopLayout"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.home.HomeFragment">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <TextView
-        android:id="@+id/titleTextField"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingTop="@dimen/titleTextFieldTopPadding"
-        android:paddingBottom="@dimen/titleTextFieldBottomPading"
-        android:text="@string/rewardsTitle"
-        android:textAlignment="center"
-        android:textSize="@dimen/titleTextFieldTextSize"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/FragmentHomeId"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.home.HomeFragment">
 
-    <Button
-        android:id="@+id/addBoarButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/addBoarButtonMarginBottom"
-        android:text="@string/button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.895"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gridLayout"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <androidx.gridlayout.widget.GridLayout
-        android:id="@+id/gridLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/gridLayoutTopMargin"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titleTextField"
-        app:useDefaultMargins="true">
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/purpleCardView"
+        <TextView
+            android:id="@+id/titleTextField"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:cardBackgroundColor="#673AB7"
-            app:layout_column="0"
-            app:layout_columnWeight="1"
-            app:layout_row="1">
+            android:layout_marginStart="@dimen/titleTextFielldMarginStart"
+            android:paddingTop="@dimen/titleTextFieldTopPadding"
+            android:paddingBottom="@dimen/titleTextFieldBottomPading"
+            android:text="@string/rewardsTitle"
+            android:textAlignment="center"
+            android:textSize="@dimen/titleTextFieldTextSize"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/constraintLayoutPurple"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <ImageView
-                    android:id="@+id/editPurpleImg"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:layout_marginStart="12dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginRight="10dp"
-                    android:src="@drawable/edit"
-                    app:layout_constraintBottom_toTopOf="@+id/homePurpleImg"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintRight_toLeftOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/iconPurpleImg"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/dutiesPurpleTxt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginBottom="30dp"
-                    android:text="0"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/dutiesPurpleImg"
-                    app:layout_constraintTop_toBottomOf="@+id/healthPurpleTxt" />
-
-                <ImageView
-                    android:id="@+id/dutiesPurpleImg"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginBottom="30dp"
-                    android:src="@drawable/ic_notifications_black_24dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/iconPurpleImg"
-                    app:layout_constraintTop_toBottomOf="@+id/homePurpleImg" />
-
-                <TextView
-                    android:id="@+id/healthPurpleTxt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginBottom="60dp"
-                    android:text="0"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/homePurpleImg"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <ImageView
-                    android:id="@+id/homePurpleImg"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginBottom="60dp"
-                    android:src="@drawable/ic_home_black_24dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/iconPurpleImg"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/purpleBoarTitle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginBottom="5dp"
-                    android:text="Locha"
-                    android:textSize="24sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="@+id/iconPurpleImg"
-                    app:layout_constraintTop_toBottomOf="@+id/iconPurpleImg" />
-
-                <ImageView
-                    android:id="@+id/iconPurpleImg"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingLeft="10dp"
-                    android:paddingTop="20dp"
-                    android:paddingBottom="10dp"
-                    app:layout_constraintBottom_toTopOf="@id/purpleBoarTitle"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintRight_toLeftOf="@id/purpleCardView"
-                    app:srcCompat="@drawable/fajny_boar"
-                    tools:ignore="NotSibling" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/orangeCardView"
+        <Button
+            android:id="@+id/addBoarButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:cardBackgroundColor="#FFC107"
-            app:layout_column="1"
-            app:layout_columnWeight="1"
-            app:layout_row="0">
+            android:layout_marginBottom="@dimen/addBoarButtonMarginBottom"
+            android:text="@string/button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.895"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gridLayout"
+            app:layout_constraintVertical_bias="0.0" />
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/orangeConstraintLayout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <ImageView
-                    android:id="@+id/orangeEditImg"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginRight="10dp"
-                    android:src="@drawable/edit"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/orangeDutiesTxt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginBottom="30dp"
-                    android:text="0"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/orangeDutiesImg"
-                    app:layout_constraintTop_toBottomOf="@+id/orangeHealthTxt" />
-
-                <TextView
-                    android:id="@+id/orangeHealthTxt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginBottom="60dp"
-                    android:text="0"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/orangeHealthImg"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <ImageView
-                    android:id="@+id/orangeDutiesImg"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginBottom="30dp"
-                    android:src="@drawable/ic_notifications_black_24dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/orangeIcon"
-                    app:layout_constraintTop_toBottomOf="@+id/orangeHealthImg" />
-
-                <ImageView
-                    android:id="@+id/orangeHealthImg"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginBottom="60dp"
-                    android:src="@drawable/ic_home_black_24dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/orangeIcon"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/orangeTitleTxt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginBottom="15dp"
-                    android:text="Warchlak"
-                    android:textSize="24sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/orangeIcon" />
-
-                <ImageView
-                    android:id="@+id/orangeIcon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="1dp"
-                    app:layout_constraintBottom_toTopOf="@id/orangeTitleTxt"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/ulany_boar" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/greenCardView"
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/gridLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:cardBackgroundColor="#CDDC39"
-            app:layout_column="0"
-            app:layout_columnWeight="1"
-            app:layout_row="0">
+            android:layout_marginTop="@dimen/gridLayoutTopMargin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleTextField"
+            app:useDefaultMargins="true">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/greenConstraintLayout"
+            <androidx.cardview.widget.CardView
+                android:id="@+id/purpleCardView"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="match_parent"
+                app:cardBackgroundColor="#673AB7"
+                app:layout_column="0"
+                app:layout_columnWeight="1"
+                app:layout_row="1"
+                app:layout_rowWeight="1">
 
-                <ImageView
-                    android:id="@+id/greenEditImg"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_marginStart="12dp"
-                    android:layout_marginTop="10dp"
-                    android:src="@drawable/edit"
-                    app:layout_constraintBottom_toTopOf="@+id/greenHomeImg"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/greenIcon"
-                    app:layout_constraintTop_toTopOf="parent" />
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayoutPurple"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-                <TextView
-                    android:id="@+id/greenDutiesTxt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginBottom="30dp"
-                    android:text="0"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/dutiesGreenImg"
-                    app:layout_constraintTop_toBottomOf="@+id/greenHealthTxt" />
+                    <ImageView
+                        android:id="@+id/editPurpleImg"
+                        android:layout_width="@dimen/purpleEditImgWidth"
+                        android:layout_height="@dimen/purpleEditImgHeight"
+                        android:layout_marginStart="@dimen/purpleConstraintLayoutStartMargin"
+                        android:layout_marginTop="@dimen/purpleConstraintLayoutTopMargin"
+                        android:layout_marginEnd="@dimen/purpleConstraintLayoutRightMargin"
+                        android:src="@drawable/edit"
+                        app:layout_constraintBottom_toTopOf="@+id/homePurpleImg"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintRight_toLeftOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/iconPurpleImg"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-                <TextView
-                    android:id="@+id/greenHealthTxt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginBottom="50dp"
-                    android:text="0"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/greenHomeImg"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    <TextView
+                        android:id="@+id/dutiesPurpleTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/purpleDutyTxtStartMargin"
+                        android:layout_marginEnd="@dimen/dutiesPurpleTxtMarginEnd"
+                        android:layout_marginBottom="@dimen/purpleDutyTxtBottomMargin"
+                        android:text="@{viewModel.liveDataOfDziks.get( 2 ).dutiesCount}"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/dutiesPurpleImg"
+                        app:layout_constraintTop_toBottomOf="@+id/healthPurpleTxt" />
 
-                <ImageView
-                    android:id="@+id/dutiesGreenImg"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginBottom="30dp"
-                    android:src="@drawable/ic_notifications_black_24dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/greenIcon"
-                    app:layout_constraintTop_toBottomOf="@+id/greenHomeImg" />
+                    <ImageView
+                        android:id="@+id/dutiesPurpleImg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/purpleDutyImgLeftMargin"
+                        android:layout_marginBottom="@dimen/purpleDutyImgBottomMargin"
+                        android:src="@drawable/ic_notifications_black_24dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/iconPurpleImg"
+                        app:layout_constraintTop_toBottomOf="@+id/homePurpleImg" />
 
-                <ImageView
-                    android:id="@+id/greenHomeImg"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/greenHomeImgLeftMargin"
-                    android:layout_marginBottom="@dimen/greenHomeImgBottomMargin"
-                    android:src="@drawable/ic_home_black_24dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/greenIcon"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    <TextView
+                        android:id="@+id/healthPurpleTxt"
+                        android:layout_width="@dimen/healthPurpleTxtWidth"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/healthPurpleTxtStartMargin"
+                        android:layout_marginEnd="@dimen/healthPurpleEndMargin"
+                        android:layout_marginBottom="@dimen/healthPurpleTxtBottomMargin"
+                        android:text="@{viewModel.liveDataOfDziks.get( 2 ).foodCount}"
+                        android:textSize="@dimen/healthPurpleTextViewSize"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/homePurpleImg"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-                <TextView
-                    android:id="@+id/greenTitleImg"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/greenTitleLeftMargin"
-                    android:layout_marginBottom="@dimen/greenTitleBottomMargin"
-                    android:text="Dzik"
-                    android:textSize="@dimen/greenTitleTextSize"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/greenIcon" />
+                    <ImageView
+                        android:id="@+id/homePurpleImg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/homePurpleImgStartMargin"
+                        android:layout_marginBottom="@dimen/homePurpleImgBottomMargin"
+                        android:src="@drawable/ic_home_black_24dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/iconPurpleImg"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-                <ImageView
-                    android:id="@+id/greenIcon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/greenIconLeftMargin"
-                    android:layout_marginBottom="@dimen/greenIconBottomMargin"
-                    app:layout_constraintBottom_toTopOf="@id/greenTitleImg"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/inny_boar" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </androidx.cardview.widget.CardView>
-    </androidx.gridlayout.widget.GridLayout>
+                    <TextView
+                        android:id="@+id/purpleBoarTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/purpleBoarTitleMarginBottom"
+                        android:text="@{viewModel.liveDataOfDziks.get( 2 ).name}"
+                        android:textSize="@dimen/purpleBoarTitleTextSize"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/iconPurpleImg"
+                        app:layout_constraintTop_toBottomOf="@+id/iconPurpleImg" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+                    <ImageView
+                        android:id="@+id/iconPurpleImg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/iconPurpleImgStartPadding"
+                        android:paddingTop="@dimen/iconPurpleImgPaddingTop"
+                        android:paddingBottom="@dimen/iconPurpleImgBottomPadding"
+                        app:layout_constraintBottom_toTopOf="@id/purpleBoarTitle"
+                        app:layout_constraintRight_toLeftOf="@id/purpleCardView"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/fajny_boar"
+                        tools:ignore="NotSibling" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/orangeCardView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardBackgroundColor="#FFC107"
+                app:layout_column="1"
+                app:layout_columnWeight="1"
+                app:layout_row="0"
+                app:layout_rowWeight="1">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/orangeConstraintLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/orangeEditImg"
+                        android:layout_width="@dimen/orangeEditImgWidth"
+                        android:layout_height="@dimen/orangeEditImgHeight"
+                        android:layout_marginStart="@dimen/orangeEditImgStartMargin"
+                        android:layout_marginTop="@dimen/orangeEditImgTopMargin"
+                        android:layout_marginEnd="@dimen/orangeEditImgEndMargin"
+                        android:src="@drawable/edit"
+                        app:layout_constraintBottom_toTopOf="@+id/orangeHealthImg"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/orangeIcon"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/orangeDutiesTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/orangeDutiesTxtMarginStart"
+                        android:layout_marginEnd="@dimen/orangeDutiesTxtEndMargin"
+                        android:layout_marginBottom="@dimen/orangeDutiesTxtMarginBottom"
+                        android:text="@{viewModel.liveDataOfDziks.get( 1 ).dutiesCount}"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/orangeDutiesImg"
+                        app:layout_constraintTop_toBottomOf="@+id/orangeHealthTxt" />
+
+                    <TextView
+                        android:id="@+id/orangeHealthTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/orangeHealthTxtStartMargin"
+                        android:layout_marginEnd="@dimen/orangeHealthTxtRightMargin"
+                        android:layout_marginBottom="@dimen/orangeHealthTxtBottomMargin"
+                        android:text="@{viewModel.liveDataOfDziks.get( 1 ).foodCount}"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/orangeHealthImg"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/orangeDutiesImg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/orangeDutiesImgStartMargin"
+                        android:layout_marginBottom="@dimen/orangeDutiesImgBottomMargin"
+                        android:src="@drawable/ic_notifications_black_24dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/orangeIcon"
+                        app:layout_constraintTop_toBottomOf="@+id/orangeHealthImg" />
+
+                    <ImageView
+                        android:id="@+id/orangeHealthImg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/orangeHealthImgStartMargin"
+                        android:layout_marginBottom="@dimen/orangeHealthImgBottomMargin"
+                        android:src="@drawable/ic_home_black_24dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/orangeIcon"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/orangeTitleTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/orangeTitleTxtMarginBottom"
+                        android:text="@{viewModel.liveDataOfDziks.get( 1 ).name}"
+                        android:textSize="@dimen/orangeTitleTxtSize"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/orangeIcon" />
+
+                    <ImageView
+                        android:id="@+id/orangeIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/orangeIconStartMargin"
+                        android:layout_marginTop="@dimen/orangeIconTopMargin"
+                        app:layout_constraintBottom_toTopOf="@id/orangeTitleTxt"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ulany_boar" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/greenCardView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardBackgroundColor="#CDDC39"
+                app:layout_column="0"
+                app:layout_columnWeight="1"
+                app:layout_row="0"
+                app:layout_rowWeight="1">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/greenConstraintLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/greenEditImg"
+                        android:layout_width="@dimen/greenEditImgWidth"
+                        android:layout_height="@dimen/greenEditImgHeight"
+                        android:layout_marginStart="@dimen/greenEditImgStartMargin"
+                        android:layout_marginTop="@dimen/greenEditImgTopMargin"
+                        android:layout_marginEnd="@dimen/greenEditImgEndMargin"
+                        android:src="@drawable/edit"
+                        app:layout_constraintBottom_toTopOf="@+id/greenHomeImg"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/greenIcon"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/greenDutiesTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/greenDutiesTxtMarginStart"
+                        android:layout_marginBottom="@dimen/greenDutiesTxtMarginBottom"
+                        android:text="@{viewModel.liveDataOfDziks.get( 0 ).dutiesCount}"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/dutiesGreenImg"
+                        app:layout_constraintTop_toBottomOf="@+id/greenHealthTxt" />
+
+                    <TextView
+                        android:id="@+id/greenHealthTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/greenHealthTxtMarginEnd"
+                        android:layout_marginEnd="@dimen/greenHealthTxtMarginRight"
+                        android:layout_marginBottom="@dimen/greenHealthTxtMarginBottom"
+                        android:text="@{viewModel.liveDataOfDziks.get( 0 ).foodCount}"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/greenHomeImg"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/dutiesGreenImg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/greenDutiesImgMarginStart"
+                        android:layout_marginBottom="@dimen/greenDutiesImgMarginBottom"
+                        android:src="@drawable/ic_notifications_black_24dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/greenIcon"
+                        app:layout_constraintTop_toBottomOf="@+id/greenHomeImg" />
+
+                    <ImageView
+                        android:id="@+id/greenHomeImg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/greenHomeImgLeftMargin"
+                        android:layout_marginBottom="@dimen/greenHomeImgBottomMargin"
+                        android:src="@drawable/ic_home_black_24dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/greenIcon"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/greenTitleImg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/greenTitleBottomMargin"
+                        android:text="@{viewModel.liveDataOfDziks.get( 0 ).name}"
+                        android:textSize="@dimen/greenTitleTextSize"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/greenIcon" />
+
+                    <ImageView
+                        android:id="@+id/greenIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/greenIconLeftMargin"
+                        android:layout_marginBottom="@dimen/greenIconBottomMargin"
+                        app:layout_constraintBottom_toTopOf="@id/greenTitleImg"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/inny_boar" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+        </androidx.gridlayout.widget.GridLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="pl.musialowicz.java.lsm.ui.home.HomeViewModel" />
+    </data>
+
+</layout>

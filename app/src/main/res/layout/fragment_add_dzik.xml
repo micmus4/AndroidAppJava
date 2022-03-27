@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/addDzikConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <Button
+        android:id="@+id/cancelAddDzikButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="40dp"
+        android:text="Cofnij"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dzikImgRadioGroup" />
+
+    <Button
+        android:id="@+id/confirmAddDzikButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="@dimen/confirmAddingDzikButtonBottomMargin"
+        android:text="@string/confirmAddingDzikButtonText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dzikImgRadioGroup" />
+
+    <RadioGroup
+        android:id="@+id/dzikImgRadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dzikImgRadioGroupTopMargin"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dzikImg2">
+
+        <RadioButton
+            android:id="@+id/dzikRadioButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dzikRadioButton1EndMargin"
+            android:layout_weight="1"/>
+
+        <RadioButton
+            android:id="@+id/dzikRadioButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:id="@+id/dzikRadioButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dzikRagioButton3StartMargin"
+            android:layout_weight="1" />
+    </RadioGroup>
+
+    <ImageView
+        android:id="@+id/dzikImg3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dzikImg3TopMargin"
+        android:layout_marginBottom="@dimen/dzikImg3BottomMargin"
+        app:layout_constraintBottom_toTopOf="@+id/dzikImgRadioGroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.176"
+        app:layout_constraintStart_toEndOf="@+id/dzikImg2"
+        app:layout_constraintTop_toBottomOf="@+id/addDzikImgTextView"
+        app:srcCompat="@drawable/ulany_boar" />
+
+    <ImageView
+        android:id="@+id/dzikImg2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dzikImg2TopMargin"
+        app:layout_constraintStart_toEndOf="@+id/dzikImg1"
+        app:layout_constraintTop_toBottomOf="@+id/addDzikImgTextView"
+        app:srcCompat="@drawable/inny_boar" />
+
+    <ImageView
+        android:id="@+id/dzikImg1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dzikImg1StartMargin"
+        android:layout_marginTop="@dimen/dzikImg1TopMargin"
+        android:layout_marginBottom="@dimen/dzikImg1BottomMargin"
+        app:layout_constraintBottom_toTopOf="@+id/dzikImgRadioGroup"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addDzikImgTextView"
+        app:srcCompat="@drawable/fajny_boar" />
+
+    <TextView
+        android:id="@+id/addDzikImgTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/addDzikTextViewStartMargin"
+        android:layout_marginTop="@dimen/addDzikTextViewTopMargin"
+        android:layout_marginEnd="@dimen/addDzikTextViewEndMargi"
+        android:text="@string/addDzikTextViewText"
+        android:textSize="@dimen/addDzikTextViewTextSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dzikInputLayout" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/dzikInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dzikInputLayoutStartMargin"
+        android:layout_marginTop="@dimen/dzikInputLayoutTopMargin"
+        android:layout_marginEnd="@dimen/dzikInputLayoutEndMargin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addDzikFragmentTextView">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/dzikInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/dzikInputEditText" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/addDzikFragmentTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/addDzikFragmentTextViewTopMargin"
+        android:text="@string/addDzikFragmentTextViewText"
+        android:textSize="@dimen/addDzikFragmentTextViewTextSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
